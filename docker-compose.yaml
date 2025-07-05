@@ -7,7 +7,6 @@ services:
     env_file: .env
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    restart: unless-stopped
 
   worker:
     build: .
@@ -15,7 +14,6 @@ services:
     env_file: .env
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    restart: unless-stopped
 
   beat:
     build: .
@@ -23,4 +21,3 @@ services:
     env_file: .env
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    restart: unless-stopped
